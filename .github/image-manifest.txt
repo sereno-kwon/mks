@@ -1,43 +1,38 @@
-# MKS 페이지 이미지 매니페스트
+# MKS 페이지 이미지 매니페스트 (출처: MKS 공식 사이트 mkspedal.com)
 # 형식: <원본 이미지 URL> <저장 경로>  (한 줄에 하나, #으로 시작하는 줄은 무시)
-# 아래 각 줄의 '#'과 URL 자리를 실제 이미지 주소로 바꿔 main에 푸시하면 Actions가 images/에 받아 커밋합니다.
-# 직접 촬영한 사진은 같은 경로로 images/에 바로 넣어도 됩니다. 비어 있는 자리는 페이지에서 회색 'MKS' 자리표시로 보입니다.
-# URL images/brand/01.jpg
-# URL images/brand/02.jpg
-# URL images/brand/03.jpg
-# URL images/brand/04.jpg
-# URL images/brand/05.jpg
-# URL images/brand/06.jpg
-# URL images/brand/07.jpg
-# URL images/brand/08.jpg
-# URL images/brand/09.jpg
-# URL images/brand/10.jpg
-# URL images/brand/11.jpg
-# URL images/city/01.jpg
-# URL images/city/02.jpg
-# URL images/city/03.jpg
-# URL images/city/04.jpg
-# URL images/ezy/01.jpg
-# URL images/ezy/02.jpg
-# URL images/ezy/03.jpg
-# URL images/ezy/04.jpg
-# URL images/ezy/05.jpg
-# URL images/ezy/06.jpg
-# URL images/hero/01.jpg
-# URL images/hero/02.jpg
-# URL images/hero/03.jpg
-# URL images/hero/04.jpg
-# URL images/lambda/01.jpg
-# URL images/lambda/02.jpg
-# URL images/lambda/03.jpg
-# URL images/lambda/04.jpg
-# URL images/lambda/05.jpg
-# URL images/lambda/06.jpg
-# URL images/sylvan/01.jpg
-# URL images/sylvan/02.jpg
-# URL images/sylvan/03.jpg
-# URL images/sylvan/04.jpg
-# URL images/sylvan/05.jpg
-# URL images/sylvan/06.jpg
-# URL images/sylvan/07.jpg
-# URL images/og.jpg
+# 이미 있는 파일은 건너뜁니다. 교체하려면 images/의 해당 파일을 지우고 URL을 바꿔 푸시하세요.
+https://www.mkspedal.com/sites/default/files/media/2015/08/11/14.jpg images/hero/01.jpg
+https://www.mkspedal.com/sites/default/files/media/2015/08/11/20141022_093512.jpg images/hero/02.jpg
+https://www.mkspedal.com/sites/default/files/media/2015/08/11/20141007_163102Re.jpg images/hero/03.jpg
+https://www.mkspedal.com/sites/default/files/images-title/2017/07/17/Ezypedal750%C3%97500.jpg images/hero/04.jpg
+https://www.mkspedal.com/sites/default/files/media/2015/09/17/1.jpg images/brand/01.jpg
+https://www.mkspedal.com/sites/default/files/media/2021/05/14/%E5%86%99%E7%9C%9F%202021-05-14%2017%2025%2034.jpg images/brand/02.jpg
+https://www.mkspedal.com/sites/default/files/media/2021/05/14/%E5%86%99%E7%9C%9F%202021-05-14%2017%2022%2049.jpg images/brand/03.jpg
+https://www.mkspedal.com/sites/default/files/media/2021/05/14/14_D3S2609.JPG images/brand/04.jpg
+https://www.mkspedal.com/sites/default/files/media/2015/08/11/20141007_174454Re.jpg images/brand/05.jpg
+https://www.mkspedal.com/sites/default/files/images-title/2015/09/17/MKS%E5%A4%96%E8%A6%B3.jpg images/brand/06.jpg
+https://www.mkspedal.com/sites/default/files/media/2021/11/25/%E5%86%99%E7%9C%9F%202021-08-27%2011%2000%2025.jpg images/brand/07.jpg
+https://www.mkspedal.com/sites/default/files/media/2021/05/14/05_D3S2418.jpg images/brand/08.jpg
+https://www.mkspedal.com/sites/default/files/media/2021/05/14/%E5%86%99%E7%9C%9F%202021-05-14%2017%2030%2006.jpg images/brand/09.jpg
+https://www.mkspedal.com/sites/default/files/media/2015/08/11/20141022_093512.jpg images/brand/10.jpg
+https://www.mkspedal.com/sites/default/files/media/2016/12/28/DSC00721.jpg images/brand/11.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/22/SYLVAN_ROAD_SV_01_750x500.jpg images/sylvan/01.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/02/22/SYLVAN_TOURING_SV_01_750x500.jpg images/sylvan/02.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/25/SYLVAN_TRACK_BK_01_750x500.jpg images/sylvan/03.jpg
+https://www.mkspedal.com/sites/default/files/media/2025/07/10/T-Alloy.jpg images/sylvan/04.jpg
+https://www.mkspedal.com/sites/default/files/media/2015/08/11/20141022_093512.jpg images/sylvan/05.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/14/SYLVAN_TOURING_NEXT_SV_01_750x500.jpg images/sylvan/06.jpg
+https://www.mkspedal.com/sites/default/files/media/2016/10/28/toeclip-photo.jpg images/sylvan/07.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/02/27/LAMBDA_SV_01_750x500.jpg images/lambda/01.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/19/LAMBDA_Ezy_Superior_BK_01_750x500.jpg images/lambda/02.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/14/ALLWAYS_BK_01_750x500.jpg images/city/01.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/20/URBAN_PLATFORM_SV_01_750x500.jpg images/city/02.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/21/GR-9_SV_01_750x500.jpg images/city/03.jpg
+https://www.mkspedal.com/sites/default/files/media/2016/12/28/DSC00721.jpg images/city/04.jpg
+https://www.mkspedal.com/sites/default/files/images-title/2017/07/17/Ezypedal750%C3%97500.jpg images/ezy/01.jpg
+https://www.mkspedal.com/sites/default/files/media/2025/11/03/Aurora_EzyS_SV_01_750x500.jpg images/ezy/02.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/01/22/EzyAdapter750x500.jpg images/ezy/03.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/01/22/Ezy-S_Adapter750x500.jpg images/ezy/04.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/18/PROMENADE_Ezy_Ti_01_750x500.jpg images/ezy/05.jpg
+https://www.mkspedal.com/sites/default/files/media/2024/03/14/ALLWAYS_SV_Ezy_Superior_01_750x500.jpg images/ezy/06.jpg
+https://www.mkspedal.com/sites/default/files/media/2015/09/17/1.jpg images/og.jpg
