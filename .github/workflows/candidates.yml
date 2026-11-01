@@ -1,0 +1,49 @@
+name: Download MKS image candidates
+on:
+  push:
+    branches: [candidates]
+    paths: [c/urls.txt, c/pages.txt, .github/workflows/candidates.yml]
+permissions:
+  contents: write
+jobs:
+  dl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+          mkdir -p c/img c/text
+          while read -r url; do
+            [ -z "$url" ] && continue
+            n=$(basename "${url%%\?*}" | python3 -c "import sys,urllib.parse;print(urllib.parse.unquote(sys.stdin.read().strip()).replace(' ','_'))")
+            curl -fsSL --retry 2 -A "$UA" -e "https://www.mkspedal.com/" -o "c/img/$n" "$url" && echo "ok $n" || echo "FAIL $url"
+          done < c/urls.txt
+          i=0
+          while read -r url; do
+            [ -z "$url" ] && continue; i=$((i+1))
+            curl -fsSL -A "$UA" "$url" | python3 -c "
+          import sys,re,html
+          s=sys.stdin.read()
+          s=re.sub(r'(?s)<(script|style|nav|header|footer)[^>]*>.*?</\1>','',s)
+          s=re.sub(r'<br\s*/?>|</p>|</div>|</h\d>|</li>|</tr>','\n',s)
+          s=html.unescape(re.sub(r'<[^>]+>',' ',s))
+          s=re.sub(r'[ \t　]+',' ',s); s=re.sub(r'\n\s*\n+','\n',s)
+          print(sys.argv[1]); print(s.strip())" "$url" > "c/text/$(printf %02d $i).txt" || echo "FAIL $url"
+          done < c/pages.txt
+          python3 -c "
+          from PIL import Image" 2>/dev/null || pip install -q pillow
+          python3 - <<'PY'
+          import os
+          from PIL import Image
+          for f in sorted(os.listdir('c/img')):
+              try:
+                  im=Image.open('c/img/'+f); print(f, im.size)
+              except Exception as e: print(f, 'ERR', e)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add c
+          git commit -m "Add downloaded candidates" && git push
